@@ -1,0 +1,67 @@
+
+/* Solution #1 with inline-block */
+/*
+.product-thumbnail {
+	display:inline-block; 
+	vertical-align:top; 
+}
+*/
+
+/* Solution #2 with float */
+.product-thumbnail {
+	float:left;
+	 
+}
+.block {
+  width: 100%;
+  
+}
+
+.product-thumbnail {
+	border:1px solid black; /*border on block*/
+	width:200px; /*width of 45% because they occupy around half of the window*/
+	height:220px;
+	padding:10px;
+	margin:10px;
+	position:relative; /*required for absolute position links in the bottom-right corner*/
+	background-color: gray;
+}
+
+/*images are floating on the left*/
+.product-thumbnail img{
+	width:60px; /* the natural size is already 150px */
+	float:left;
+}
+
+.product-thumbnail ul{
+	list-style-position:inside; /*permits aligning the bullet points towards the interior*/	
+}
+
+.product-thumbnail .price{
+	color : red;
+	font-size : 16px;
+	position:absolute;
+	bottom:30px;
+	right:15px;
+}
+
+/* links positionned at the bottom-right corner */
+.product-thumbnail a{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+
+.catalog::after{
+	width: 100%;
+    content: '';
+    display: block;
+    clear: left;
+	flex-wrap: wrap;
+
+}
+.product-thumbnail.centered {
+	position: absolute;
+	
+  }
+
